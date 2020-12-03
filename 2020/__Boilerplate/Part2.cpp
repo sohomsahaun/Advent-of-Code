@@ -3,17 +3,17 @@
 using namespace std;
 using ll = long long;
 
-int solve(vector<int>& v) {
+int solve(vector<string>& v) {
 
 }
 
 int main() {
     freopen("in2.txt", "r", stdin);
 
-    int n;
-    vector<int> input;
-    while (cin >> n) {
-        input.push_back(n);
+    string s;
+    vector<string> input;
+    while (cin >> s) {
+        input.push_back(s);
     }
 
     cout << solve(input);
