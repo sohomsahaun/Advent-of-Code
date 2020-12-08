@@ -4,7 +4,7 @@ using namespace std;
 using ll = long long;
 
 #define N 100005
-vector<int> tree[N];
+vector<int> graph[N];
 bool vis[N];
 map<string,int> mp;
 int id = 0;
@@ -19,7 +19,7 @@ void add_edge(string& from, string& to) {
     register_bag(from);
     register_bag(to);
 
-    tree[mp[from]].push_back(mp[to]);
+    graph[mp[from]].push_back(mp[to]);
 }
 
 bool is_number(string& s) {
@@ -31,7 +31,7 @@ bool is_number(string& s) {
 
 void dfs(int u) {
     vis[u] = 1;
-    for(int v : tree[u]) dfs(v);
+    for(int v : graph[u]) dfs(v);
 }
 
 int solve() {

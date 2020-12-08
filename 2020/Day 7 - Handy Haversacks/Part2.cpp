@@ -4,7 +4,7 @@ using namespace std;
 using ll = long long;
 
 #define N 100005
-vector<pair<int,int>> tree[N];
+vector<pair<int,int>> graph[N];
 map<string,int> mp;
 int id = 0;
 
@@ -18,7 +18,7 @@ void add_edge(string& from, string& to, int weight) {
     register_bag(from);
     register_bag(to);
 
-    tree[mp[from]].push_back({mp[to], weight});
+    graph[mp[from]].push_back({mp[to], weight});
 }
 
 bool is_number(string& s) {
@@ -31,7 +31,7 @@ bool is_number(string& s) {
 int dfs(int u) {
     int cnt = 1;
     int v, w;
-    for(auto p : tree[u]) {
+    for(auto p : graph[u]) {
         v = p.first;
         w = p.second;
         cnt += dfs(v)*w;
