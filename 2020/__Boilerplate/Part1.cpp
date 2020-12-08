@@ -3,20 +3,24 @@
 using namespace std;
 using ll = long long;
 
-int solve(vector<string>& v) {
+vector<string> input;
+
+int solve() {
 
 }
 
 int main() {
     freopen("in1.txt", "r", stdin);
 
-    string s;
-    vector<string> input;
-    while (cin >> s) {
-        input.push_back(s);
+    stringstream str;
+    string s, ss;
+
+    while (getline(cin, s)) {
+        str = stringstream(s);
+
     }
 
-    cout << solve(input);
+    cout << solve();
 
     return 0;
 }
