@@ -18,8 +18,8 @@ ll solve() {
     while (r++ < n) {
         while ((sum > targ) && (l+1 < r)) sum -= input[l++];
         if (sum == targ) {
-            int mn = *min_element(input.begin()+l, input.begin()+r);
-            int mx = *max_element(input.begin()+l, input.begin()+r);
+            ll mn = *min_element(input.begin()+l, input.begin()+r);
+            ll mx = *max_element(input.begin()+l, input.begin()+r);
             return (mn+mx);
         }
         if (r < n) sum += input[r];
