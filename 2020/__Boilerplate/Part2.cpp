@@ -3,7 +3,7 @@
 using namespace std;
 using ll = long long;
 
-vector<string> input;
+vector<string> in;
 
 int solve() {
 
