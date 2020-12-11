@@ -48,14 +48,14 @@ Count get_count(vector<string>& grid, int r, int c) {
 }
 
 vector<string> get_next_state(vector<string>& grid) {
-    int r, c, i, j;
-    r = grid.size();
-    c = grid[0].size();
+    int rows, cols, i, j;
+    rows = grid.size();
+    cols = grid[0].size();
 
-    vector<string> newGrid(r, string(c, '-'));
+    vector<string> newGrid(rows, string(cols, '-'));
 
-    for (i = 0; i < r; ++i) {
-        for (j = 0; j < c; ++j) {
+    for (i = 0; i < rows; ++i) {
+        for (j = 0; j < cols; ++j) {
             char ch = grid[i][j];
             Count cnt = get_count(grid, i, j);
 
