@@ -97,7 +97,7 @@ int solve() {
     }
 
     rows = grid.size();
-    cols= grid[0].size();
+    cols = grid[0].size();
     cnt = 0;
 
     for (i = 0; i < rows; ++i) {
