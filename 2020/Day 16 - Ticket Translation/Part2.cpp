@@ -34,7 +34,7 @@ bool is_departure(Field& field) {
 }
 
 ll solve() {
-    int n,i, j, k, val, l1, r1, l2, r2, cnt;
+    int n, i, j, k, val, l1, r1, l2, r2, cnt;
     ll ans;
     bool f;
     vector<bool> valid(N, 0);
