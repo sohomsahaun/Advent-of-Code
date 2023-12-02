@@ -35,10 +35,10 @@ ll solve() {
     pr = pg = pb = 0;
     for (auto [r, g, b] : a) {
       pr = max(pr, r);
-      pb = max(pb, b);
       pg = max(pg, g);
+      pb = max(pb, b);
     }
-    ans += pr*pb*pg;
+    ans += pr*pg*pb;
   }
   return ans;
 }
